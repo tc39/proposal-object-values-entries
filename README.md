@@ -3,6 +3,12 @@ ES7 Proposal, specs, and reference implementation for `Object.values`/`Object.en
 
 Spec drafted by [@ljharb](https://github.com/ljharb).
 
+## Previous discussions
+ - [TC39 meeting notes](https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues)
+ - esdiscuss:
+  - https://esdiscuss.org/topic/object-entries-object-values
+  - https://esdiscuss.org/topic/es6-iteration-over-object-values
+
 ## Rationale
 It is a very common use case to need the own values of an object - for example, when using an object as a hash filter. Many libraries have a “values” function: lodash/underscore, jQuery, Backbone, etc.
 
@@ -15,4 +21,4 @@ You can view the spec in [markdown format](spec.md) or rendered as [HTML](http:/
 Note: there's been a small bit of spec refactoring to ensure that `Object.{keys,values,entries}` share the same key ordering.
 
 ## Iterables or Arrays?
-Consistency with `Object.keys` is paramount in this proposal‘s opinion. A follow-on proposal for an iterable, however, could likely be `Reflect.ownValues` and `Reflect.ownEntries`, which would complete the triplet with `Reflect.ownKeys`, providing an iterator over both string-valued and symbol-valued properties. However, this proposal is focused on `Object.values`/`Object.entries`, and the existence of either the `Object` or `Reflect` forms should not preclude the existence of the other.
+Consistency with `Object.keys` is paramount in this proposal‘s opinion. A follow-on proposal for an iterable, however, could likely be `Reflect.ownValues` and `Reflect.ownEntries`, which would complete the triplet with `Reflect.ownKeys`, providing an iterator over both string-valued and symbol-valued properties. However, this proposal is focused on `Object.values`/`Object.entries`, and the existence of either the `Object` or `Reflect` forms should not preclude the existence of the other. In addition, the current precedent for returning iterators from `keys`/`values`/`entries` currently only applies to methods on prototypes - and in addition, “`Object` is special” seems to be something many accept.
