@@ -46,7 +46,7 @@
 	<emu-note>The _length_ property of the _entries_ method is *1*.</emu-note>
 </emu-clause>
 
-<emu-clause aoid="EnumerableOwnProperties">
+<emu-clause id="EnumerableOwnProperties" aoid="EnumerableOwnProperties">
 	<h1>EnumerableOwnProperties</h1>
 	<p>When the abstract operation EnumerableOwnProperties is called with Object _O_ and String _kind_ the following steps are taken:</p>
 	<emu-alg>
