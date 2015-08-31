@@ -8,6 +8,9 @@ Spec drafted by [@ljharb](https://github.com/ljharb).
  - esdiscuss:
   - https://esdiscuss.org/topic/object-entries-object-values
   - https://esdiscuss.org/topic/es6-iteration-over-object-values
+  - https://esdiscuss.org/topic/object-values-and-or-object-foreach -> https://esdiscuss.org/topic/iteration-was-re-object-values-and-or-object-foreach
+  - https://esdiscuss.org/topic/object-entries-in-2015
+  - https://esdiscuss.org/topic/providing-object-iterators-beyond-just-object-keys
 
 ## Rationale
 It is a very common use case to need the own values of an object - for example, when using an object as a hash filter. Many libraries have a “values” function: lodash/underscore, jQuery, Backbone, etc.
