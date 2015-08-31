@@ -1,0 +1,137 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf8">
+	<title>Object.values / Object.entries</title>
+	<link rel="stylesheet" href="./spec.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<script src="./spec.js"></script>
+</head>
+
+<body>
+	<div id="menu-toggle">☰</div>
+	<div id="menu">
+		<div id="menu-toc">
+			<ol class="toc">
+				<li><span class="item-toggle-none"></span><a href="#Object.keys" title="Object.keys( O )"><span class="secnum">1</span> Object.keys( O )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#Object.values" title="Object.values( O )"><span class="secnum">2</span> Object.values( O )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#Object.entries" title="Object.entries( O )"><span class="secnum">3</span> Object.entries( O )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#" title="EnumerableOwnProperties"><span class="secnum">4</span> EnumerableOwnProperties</a></li>
+			</ol>
+		</div>
+	</div>
+	<emu-clause id="Object.keys">
+		<h1><span class="secnum">1</span>Object.keys( O )<span class="utils"><span class="anchor"><a href="#Object.keys">#</a></span></span></h1>
+		<p>When the
+			<emu-val>keys</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
+		<emu-alg>
+			<ol>
+				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
+				<li>Let <var>nameList</var> be <a href="#">EnumerableOwnProperties</a>(<var>obj</var>,
+					<emu-val>"key"</emu-val>).</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).</li>
+			</ol>
+		</emu-alg>
+		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
+		<emu-note><span class="note">Note</span>The <var>length</var> property of the <var>keys</var> method is
+			<emu-val>1</emu-val>.</emu-note>
+	</emu-clause>
+
+	<emu-clause id="Object.values">
+		<h1><span class="secnum">2</span>Object.values( O )<span class="utils"><span class="anchor"><a href="#Object.values">#</a></span></span></h1>
+		<p>When the
+			<emu-val>values</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
+		<emu-alg>
+			<ol>
+				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
+				<li>Let <var>nameList</var> be <a href="#">EnumerableOwnProperties</a>(<var>obj</var>,
+					<emu-val>"value"</emu-val>).</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).</li>
+			</ol>
+		</emu-alg>
+		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
+		<emu-note><span class="note">Note</span>The <var>length</var> property of the <var>values</var> method is
+			<emu-val>1</emu-val>.</emu-note>
+	</emu-clause>
+
+	<emu-clause id="Object.entries">
+		<h1><span class="secnum">3</span>Object.entries( O )<span class="utils"><span class="anchor"><a href="#Object.entries">#</a></span></span></h1>
+		<p>When the
+			<emu-val>entries</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
+		<emu-alg>
+			<ol>
+				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
+				<li>Let <var>nameList</var> be <a href="#">EnumerableOwnProperties</a>(<var>obj</var>,
+					<emu-val>"key+value"</emu-val>).</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).</li>
+			</ol>
+		</emu-alg>
+		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
+		<emu-note><span class="note">Note</span>The <var>length</var> property of the <var>entries</var> method is
+			<emu-val>1</emu-val>.</emu-note>
+	</emu-clause>
+
+	<emu-clause aoid="EnumerableOwnProperties">
+		<h1><span class="secnum">4</span>EnumerableOwnProperties<span class="utils"><span class="anchor"><a href="#">#</a></span></span></h1>
+		<p>When the abstract operation EnumerableOwnProperties is called with Object <var>O</var> and String <var>kind</var> the following steps are taken:</p>
+		<emu-alg>
+			<ol>
+				<li>Assert: <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-data-types-and-values">Type</a>(<var>O</var>) is Object.</li>
+				<li>Let <var>ownKeys</var> be O.[[OwnPropertyKeys]]().</li>
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>ownKeys</var>).</li>
+				<li>Let <var>properties</var> be a new empty
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>.</li>
+				<li>Repeat, for each element <var>key</var> of <var>ownKeys</var> in
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref> order
+					<ol>
+						<li>If <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-data-types-and-values">Type</a>(<var>key</var>) is String, then
+							<ol>
+								<li>Let <var>desc</var> be O.[[GetOwnProperty]](<var>key</var>).</li>
+								<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>desc</var>).</li>
+								<li>If <var>desc</var> is not
+									<emu-val>undefined</emu-val> and <var>desc</var>.[[Enumerable]] is
+									<emu-val>true</emu-val>, then
+									<ol>
+										<li>If <var>kind</var> is
+											<emu-val>"key"</emu-val>, append <var>key</var> to <var>properties</var>.</li>
+										<li>Else,
+											<ol>
+												<li>Let <var>elementKey</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-tostring">ToString</a>(<var>key</var>).</li>
+												<li>Let <var>value</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-get-o-p">Get</a>(<var>O</var>, <var>key</var>).</li>
+												<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>value</var>).</li>
+												<li>If <var>kind</var> is
+													<emu-val>"value"</emu-val>, append <var>value</var> to <var>properties</var>.</li>
+												<li>Else,
+													<ol>
+														<li>Assert: <var>kind</var> is
+															<emu-val>"key+value"</emu-val>.</li>
+														<li>Let <var>entry</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(«<var>key</var>, <var>value</var>»).</li>
+														<li>Append <var>entry</var> to <var>properties</var>.</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li>Order the elements of <var>properties</var> so they are in the same relative order as would be produced by the Iterator that would be returned if the [[Enumerate]] internal method was invoked on <var>O</var>.</li>
+				<li>Return <var>properties</var>.</li>
+			</ol>
+		</emu-alg>
+		<emu-note><span class="note">Note</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
+
+		<p>Note: The "
+			<emu-xref href="#sec-enumerableownnames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
+			<emu-xref href="#sec-enumerableownnames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>(<var>x</var>) should be changed to EnumerableOwnProperties(<var>x</var>,
+			<emu-val>"key"</emu-val>)</p>
+	</emu-clause>
+</body>
