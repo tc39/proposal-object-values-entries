@@ -24,7 +24,7 @@ It is a very common use case to need the own values of an object - for example, 
 
 It is also useful to obtain an array of key/value pairs (what the spec calls “entries”) from an object, for the purposes of iteration or serialization. With the advent of the `Map` constructor accepting an iterable of `entries`, and its associated `entries` iterator (`WeakMap` also accepts iterable `entries` in its constructor), it becomes very compelling to want to quickly convert a plain object to a `Map`, via passing an array of `entries` into `new Map`.
 
-We already have the precedent of `Object.keys` returning an array of own keys, and matched triplets of `keys`/`values`/`entries` iterators on `Map`/`Set`/`Array`.  As such, per discussions on es-discuss and in at least one previous TC39 meeting, this proposal seeks to add `Object.values` and `Object.entries` to ECMAScript. Like `Object.keys`, they would return arrays. Their ordering would match `Object.keys` ordering precisely, such that the indices of all three resulting arrays would reflect the same key, value, or entry on the object.
+We already have the precedent of `Object.keys` returning an array of own keys, and matched triplets of `keys`/`values`/`entries` iterators on `Map`/`Set`/`Array`. As such, per discussions on es-discuss and in at least one previous TC39 meeting, this proposal seeks to add `Object.values` and `Object.entries` to ECMAScript. Like `Object.keys`, they would return arrays. Their ordering would match `Object.keys` ordering precisely, such that the indices of all three resulting arrays would reflect the same key, value, or entry on the object.
 
 ## Spec
 You can view the spec in [markdown format](spec.md) or rendered as [HTML](http://ljharb.github.io/proposal-object-values-entries/).
