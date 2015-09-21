@@ -1,7 +1,7 @@
 <!doctype html>
 
 <head>
-	<meta charset="utf8">
+	<meta charset="utf-8">
 	<title>Object.values / Object.entries</title>
 	<link rel="stylesheet" href="./spec.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
@@ -31,7 +31,8 @@
 				<li>Let <var>nameList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"key"</emu-val>).</li>
 				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
+				</li>
 			</ol>
 		</emu-alg>
 		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
@@ -50,7 +51,8 @@
 				<li>Let <var>nameList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"value"</emu-val>).</li>
 				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
+				</li>
 			</ol>
 		</emu-alg>
 		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
@@ -69,7 +71,8 @@
 				<li>Let <var>nameList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"key+value"</emu-val>).</li>
 				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
+				</li>
 			</ol>
 		</emu-alg>
 		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
@@ -124,14 +127,15 @@
 					</ol>
 				</li>
 				<li>Order the elements of <var>properties</var> so they are in the same relative order as would be produced by the Iterator that would be returned if the [[Enumerate]] internal method was invoked on <var>O</var>.</li>
-				<li>Return <var>properties</var>.</li>
+				<li>Return <var>properties</var>.
+				</li>
 			</ol>
 		</emu-alg>
 		<emu-note><span class="note">Note</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
 
 		<p>Note: The "
-			<emu-xref href="#sec-enumerableownnames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
-			<emu-xref href="#sec-enumerableownnames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>(<var>x</var>) should be changed to EnumerableOwnProperties(<var>x</var>,
+			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
+			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>(<var>x</var>) should be changed to EnumerableOwnProperties(<var>x</var>,
 			<emu-val>"key"</emu-val>)</p>
 	</emu-clause>
 </body>
