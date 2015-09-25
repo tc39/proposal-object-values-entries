@@ -73,6 +73,7 @@
 		1. Return _properties_.
 	</emu-alg>
 	<emu-note>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
+	<emu-note>It is possible that the Get operation may invoke a getter function that may mutate the object by changing values, adding properties, or deleting properties. Any changed value will only affect the output if it has not yet been collected into the _properties_ List; any added property during enumeration is not guaranteed to be included in the output; and any property deleted during enumeration will be ignored.</emu-note>
 
 	<p>Note: The "EnumerableOwnNames" section is deleted. Any existing references to EnumerableOwnNames(_x_) should be changed to EnumerableOwnProperties(_x_, *"key"*)</p>
 </emu-clause>
