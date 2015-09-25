@@ -131,7 +131,10 @@
 				</li>
 			</ol>
 		</emu-alg>
-		<emu-note><span class="note">Note</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
+		<emu-note><span class="note">Note 1</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
+		<emu-note><span class="note">Note 2</span>It is possible that the
+			<emu-xref aoid="Get"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-get-o-p">Get</a></emu-xref> operation may invoke a getter function that may mutate the object by changing values, adding properties, or deleting properties. Any changed value will only affect the output if it has not yet been collected into the <var>properties</var>
+			<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>; any added property during enumeration is not guaranteed to be included in the output; and any property deleted during enumeration will be ignored.</emu-note>
 
 		<p>Note: The "
 			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
