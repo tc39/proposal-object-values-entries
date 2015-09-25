@@ -48,10 +48,10 @@
 			<ol>
 				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
 				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
-				<li>Let <var>nameList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>valueList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"value"</emu-val>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>valueList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>valueList</var>).
 				</li>
 			</ol>
 		</emu-alg>
@@ -68,10 +68,10 @@
 			<ol>
 				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
 				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
-				<li>Let <var>nameList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>entryList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"key+value"</emu-val>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
+				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>entryList</var>).</li>
+				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>entryList</var>).
 				</li>
 			</ol>
 		</emu-alg>
