@@ -1,9 +1,13 @@
 <!doctype html>
 <meta charset="utf8">
-<title>Object.values / Object.entries</title>
 <link rel="stylesheet" href="./spec.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <script src="./spec.js"></script>
+<pre class="metadata">
+title: Object.values / Object.entries
+stage: 2
+contributors: Jordan Harband
+</pre>
 <emu-clause id="Object.keys">
 	<h1>Object.keys( O )</h1>
 	<p>When the *keys* function is called with argument _O_, the following steps are taken:</p>
