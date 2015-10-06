@@ -63,6 +63,8 @@ When the abstract operation EnumerableOwnProperties is called with Object *O* an
 
 The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.
 
+It is possible that the `[[Get]]` operation may invoke a getter function that may mutate the object by changing values or enumerability, adding properties, or deleting properties. Any changed value will only affect the output if it has not yet been collected into the *properties* List; any property added or made enumerable during enumeration is not guaranteed to be included in the output; and any property deleted or made non-enumerable during enumeration will be ignored.
+
 Note: The "[EnumerableOwnNames][enumerable-own-names]" section is deleted. Any existing references to [EnumerableOwnNames][enumerable-own-names](*x*) should be changed to [EnumerableOwnProperties][enumerable-own-properties](*x*, **"key"**)
 
 [return-if-abrupt]: http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt
