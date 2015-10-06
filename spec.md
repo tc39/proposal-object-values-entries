@@ -51,7 +51,6 @@ When the abstract operation EnumerableOwnProperties is called with Object *O* an
       1. If *desc* is not **undefined** and *desc*.[[Enumerable]] is **true**, then
         1. If *kind* is **"key"**, append *key* to *properties*.
         1. Else,
-          1. Let *elementKey* be [ToString][to-string](*key*).
           1. Let *value* be [Get][get](*O*, *key*).
           1. [ReturnIfAbrupt][return-if-abrupt](*value*).
           1. If *kind* is **"value"**, append *value* to *properties*.

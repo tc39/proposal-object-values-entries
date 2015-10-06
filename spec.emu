@@ -65,7 +65,6 @@ contributors: Jordan Harband
 				1. If _desc_ is not *undefined* and _desc_.[[Enumerable]] is *true*, then
 					1. If _kind_ is *"key"*, append _key_ to _properties_.
 					1. Else,
-						1. Let _elementKey_ be ToString(_key_).
 						1. Let _value_ be Get(_O_, _key_).
 						1. ReturnIfAbrupt(_value_).
 						1. If _kind_ is *"value"*, append _value_ to _properties_.
