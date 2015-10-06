@@ -11,6 +11,6 @@ if (!Object.values) {
 
 if (!Object.entries) {
 	Object.entries = function entries(O) {
-		return reduce(keys(O), (e, k) => concat(e, has(O, k) ? [[k, O[k]] : []), []);
+		return reduce(keys(O), (e, k) => concat(e, has(O, k) ? [[k, O[k]]] : []), []);
 	};
 }
