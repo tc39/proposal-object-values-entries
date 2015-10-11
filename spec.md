@@ -9,7 +9,7 @@ When the **keys** function is called with argument *O*, the following steps are 
 
 If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.
 
-Note: The *length* property of the *keys* method is **1**.
+The *length* property of the *keys* method is **1**.
 
 # Object.values( O )
 
@@ -22,7 +22,7 @@ When the *values* function is called with argument *O*, the following steps are 
 
 If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.
 
-Note: The *length* property of the *values* method is **1**.
+The *length* property of the *values* method is **1**.
 
 # Object.entries( O )
 
@@ -35,7 +35,7 @@ When the **entries** function is called with argument *O*, the following steps a
 
 If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.
 
-Note: The *length* property of the *entries* method is **1**.
+The *length* property of the *entries* method is **1**.
 
 ## EnumerableOwnProperties Abstract Operation
 
