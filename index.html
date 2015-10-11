@@ -21,7 +21,7 @@
 			</ol>
 		</div>
 	</div>
-	<h1 class="version">Stage 2 Draft / October 6, 2015</h1>
+	<h1 class="version">Stage 2 Draft / October 11, 2015</h1>
 	<h1 class="title">Object.values / Object.entries</h1>
 	<emu-clause id="Object.keys">
 		<h1><span class="secnum">1</span>Object.keys( O )<span class="utils"><span class="anchor"><a href="#Object.keys">#</a></span></span></h1>
@@ -39,8 +39,8 @@
 			</ol>
 		</emu-alg>
 		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
-		<emu-note><span class="note">Note</span>The <var>length</var> property of the <var>keys</var> method is
-			<emu-val>1</emu-val>.</emu-note>
+		<p>The <var>length</var> property of the <var>keys</var> method is
+			<emu-val>1</emu-val>.</p>
 	</emu-clause>
 
 	<emu-clause id="Object.values">
@@ -59,8 +59,8 @@
 			</ol>
 		</emu-alg>
 		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
-		<emu-note><span class="note">Note</span>The <var>length</var> property of the <var>values</var> method is
-			<emu-val>1</emu-val>.</emu-note>
+		<p>The <var>length</var> property of the <var>values</var> method is
+			<emu-val>1</emu-val>.</p>
 	</emu-clause>
 
 	<emu-clause id="Object.entries">
@@ -79,8 +79,8 @@
 			</ol>
 		</emu-alg>
 		<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
-		<emu-note><span class="note">Note</span>The <var>length</var> property of the <var>entries</var> method is
-			<emu-val>1</emu-val>.</emu-note>
+		<p>The <var>length</var> property of the <var>entries</var> method is
+			<emu-val>1</emu-val>.</p>
 	</emu-clause>
 
 	<emu-clause id="EnumerableOwnProperties" aoid="EnumerableOwnProperties">
@@ -134,9 +134,8 @@
 			</ol>
 		</emu-alg>
 		<emu-note><span class="note">Note 1</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
-		<emu-note><span class="note">Note 2</span>It is possible that the
-			<emu-xref aoid="Get"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-get-o-p">Get</a></emu-xref> operation may invoke a getter function that may mutate the object by changing values, adding properties, or deleting properties. Any changed value will only affect the output if it has not yet been collected into the <var>properties</var>
-			<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>; any added property during enumeration is not guaranteed to be included in the output; and any property deleted during enumeration will be ignored.</emu-note>
+		<emu-note><span class="note">Note 2</span>It is possible that the [[Get]] operation may invoke a getter function that may mutate the object by changing values or enumerability, adding properties, or deleting properties. Any changed value will only affect the output if it has not yet been collected into the <var>properties</var>
+			<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>; any property added or made enumerable during enumeration is not guaranteed to be included in the output; and any property deleted or made non-enumerable during enumeration will be ignored.</emu-note>
 
 		<p>Note: The "
 			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
@@ -145,7 +144,6 @@
 	</emu-clause>
 	<emu-annex id="sec-copyright-and-software-license">
 		<h1><span class="secnum">A</span>Copyright &amp; Software License<span class="utils"><span class="anchor"><a href="#sec-copyright-and-software-license">#</a></span></span></h1>
-
 		<h2>Copyright Notice</h2>
 		<p>© 2015 Jordan Harband</p>
 
