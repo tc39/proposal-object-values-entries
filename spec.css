@@ -58,6 +58,12 @@ ol.toc ol.toc {
 
 var {
   color: #2aa198;
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+}
+
+var.referenced {
+  background-color: #ffff33;
 }
 
 emu-const {
@@ -195,6 +201,10 @@ emu-mods {
     vertical-align: sub;
     font-style: normal;
     font-weight: normal;
+}
+
+emu-production[collapsed] emu-mods {
+  display: none;
 }
 
 emu-params, emu-opt {
