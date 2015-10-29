@@ -28,7 +28,7 @@ It is also useful to obtain an array of key/value pairs (what the spec calls “
 We already have the precedent of `Object.keys` returning an array of own keys, and matched triplets of `keys`/`values`/`entries` iterators on `Map`/`Set`/`Array`. As such, per discussions on es-discuss and in at least one previous TC39 meeting, this proposal seeks to add `Object.values` and `Object.entries` to ECMAScript. Like `Object.keys`, they would return arrays. Their ordering would match `Object.keys` ordering precisely, such that the indices of all three resulting arrays would reflect the same key, value, or entry on the object.
 
 ## Spec
-You can view the spec in [markdown format](spec.md) or rendered as [HTML](http://ljharb.github.io/proposal-object-values-entries/).
+You can view the spec in [markdown format](spec.md) or rendered as [HTML](http://tc39.github.io/proposal-object-values-entries/).
 Note: there's been a small bit of spec refactoring to ensure that `Object.{keys,values,entries}` share the same key ordering.
 
 ## Iterators or Arrays?
