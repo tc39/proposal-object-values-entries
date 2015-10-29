@@ -28,8 +28,8 @@
 	"homepage": "https://github.com/ljharb/proposal-object-values-entries#readme",
 	"dependencies": {},
 	"devDependencies": {
-		"ecmarkup": "^2.7.2",
+		"ecmarkup": "^2.8.0",
 		"js-beautify": "^1.5.10",
-		"tape": "^4.2.1"
+		"tape": "^4.2.2"
 	}
 }
