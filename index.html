@@ -26,7 +26,7 @@
 			</ol>
 		</div>
 	</div>
-	<h1 class="version">Stage 2 Draft / October 29, 2015</h1>
+	<h1 class="version">Stage 2 Draft / November 3, 2015</h1>
 	<h1 class="title">Object.values / Object.entries</h1>
 	<emu-clause id="Object.keys">
 		<h1><span class="secnum">1</span>Object.keys( O )<span class="utils"><span class="anchor"><a href="#Object.keys">#</a></span></span></h1>
@@ -34,11 +34,9 @@
 			<emu-val>keys</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
-				<li>Let <var>nameList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>obj</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
+				<li>Let <var>nameList</var> be ? <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"key"</emu-val>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>nameList</var>).</li>
 				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
 				</li>
 			</ol>
@@ -52,11 +50,9 @@
 			<emu-val>values</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
-				<li>Let <var>valueList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>obj</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
+				<li>Let <var>valueList</var> be ? <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"value"</emu-val>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>valueList</var>).</li>
 				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>valueList</var>).
 				</li>
 			</ol>
@@ -70,11 +66,9 @@
 			<emu-val>entries</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Let <var>obj</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>obj</var>).</li>
-				<li>Let <var>entryList</var> be <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>obj</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
+				<li>Let <var>entryList</var> be ? <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
 					<emu-val>"key+value"</emu-val>).</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>entryList</var>).</li>
 				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>entryList</var>).
 				</li>
 			</ol>
@@ -88,8 +82,7 @@
 		<emu-alg>
 			<ol>
 				<li>Assert: <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-data-types-and-values">Type</a>(<var>O</var>) is Object.</li>
-				<li>Let <var>ownKeys</var> be O.[[OwnPropertyKeys]]().</li>
-				<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>ownKeys</var>).</li>
+				<li>Let <var>ownKeys</var> be ? O.[[OwnPropertyKeys]]().</li>
 				<li>Let <var>properties</var> be a new empty
 					<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>.</li>
 				<li>Repeat, for each element <var>key</var> of <var>ownKeys</var> in
@@ -97,8 +90,7 @@
 					<ol>
 						<li>If <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-data-types-and-values">Type</a>(<var>key</var>) is String, then
 							<ol>
-								<li>Let <var>desc</var> be O.[[GetOwnProperty]](<var>key</var>).</li>
-								<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>desc</var>).</li>
+								<li>Let <var>desc</var> be ? O.[[GetOwnProperty]](<var>key</var>).</li>
 								<li>If <var>desc</var> is not
 									<emu-val>undefined</emu-val> and <var>desc</var>.[[Enumerable]] is
 									<emu-val>true</emu-val>, then
@@ -107,8 +99,7 @@
 											<emu-val>"key"</emu-val>, append <var>key</var> to <var>properties</var>.</li>
 										<li>Else,
 											<ol>
-												<li>Let <var>value</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-get-o-p">Get</a>(<var>O</var>, <var>key</var>).</li>
-												<li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt">ReturnIfAbrupt</a>(<var>value</var>).</li>
+												<li>Let <var>value</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-get-o-p">Get</a>(<var>O</var>, <var>key</var>).</li>
 												<li>If <var>kind</var> is
 													<emu-val>"value"</emu-val>, append <var>value</var> to <var>properties</var>.</li>
 												<li>Else,
