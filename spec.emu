@@ -5,7 +5,7 @@
 <script src="./spec.js"></script>
 <pre class="metadata">
 title: Object.values / Object.entries
-stage: 2
+stage: 3
 contributors: Jordan Harband
 </pre>
 <emu-clause id="Object.keys">
