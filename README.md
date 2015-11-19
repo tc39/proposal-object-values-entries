@@ -3,7 +3,7 @@ ES7 Proposal, specs, and reference implementation for `Object.values`/`Object.en
 
 Spec drafted by [@ljharb](https://github.com/ljharb).
 
-This proposal is currently at [stage 2](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
+This proposal is currently at [stage 3](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
 
 Designated TC39 reviewers: @wycats @littledan @rwaldron
 
