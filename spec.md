@@ -41,7 +41,7 @@ When the abstract operation EnumerableOwnProperties is called with Object *O* an
           1. If *kind* is **"value"**, append *value* to *properties*.
           1. Else,
             1. Assert: *kind* is **"key+value"**.
-            1. Let *entry* be [CreateArrayFromList][create-array-from-list](&laquo;*key*, *value*&raquo;).
+            1. Let *entry* be [CreateArrayFromList][create-array-from-list](&laquo; *key*, *value* &raquo;).
             1. Append *entry* to *properties*.
   1. Order the elements of *properties* so they are in the same relative order as would be produced by the Iterator that would be returned if the [[Enumerate]] internal method was invoked on *O*.
   1. Return *properties*.
