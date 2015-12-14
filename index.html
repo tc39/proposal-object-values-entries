@@ -26,7 +26,7 @@
 			</ol>
 		</div>
 	</div>
-	<h1 class="version">Stage 3 Draft / December 10, 2015</h1>
+	<h1 class="version">Stage 3 Draft / December 14, 2015</h1>
 	<h1 class="title">Object.values / Object.entries</h1>
 	<emu-clause id="Object.keys">
 		<h1><span class="secnum">1</span>Object.keys( O )<span class="utils"><span class="anchor"><a href="#Object.keys">#</a></span></span></h1>
@@ -123,9 +123,7 @@
 				</li>
 			</ol>
 		</emu-alg>
-		<emu-note><span class="note">Note 1</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
-		<emu-note><span class="note">Note 2</span>It is possible that the [[Get]] operation may invoke a getter function that may mutate the object by changing values or enumerability, adding properties, or deleting properties. Any changed value will only affect the output if it has not yet been collected into the <var>properties</var>
-			<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>; any property added or made enumerable during enumeration is not guaranteed to be included in the output; and any property deleted or made non-enumerable during enumeration will be ignored.</emu-note>
+		<emu-note><span class="note">Note</span>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
 
 		<p>Note: The "
 			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
