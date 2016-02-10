@@ -5,8 +5,6 @@ When the **keys** function is called with argument *O*, the following steps are 
   1. Let *nameList* be [?][return-if-abrupt] [EnumerableOwnProperties][enumerable-own-properties](*obj*, **"key"**).
   1. Return [CreateArrayFromList][create-array-from-list](*nameList*).
 
-If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.
-
 # Object.values( O )
 
 When the *values* function is called with argument *O*, the following steps are taken:
@@ -14,16 +12,12 @@ When the *values* function is called with argument *O*, the following steps are 
   1. Let *nameList* be [?][return-if-abrupt] [EnumerableOwnProperties][enumerable-own-properties](*obj*, **"value"**).
   1. Return [CreateArrayFromList][create-array-from-list](*nameList*).
 
-If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.
-
 # Object.entries( O )
 
 When the **entries** function is called with argument *O*, the following steps are taken:
   1. Let *obj* be [?][return-if-abrupt] [ToObject][to-object](*O*).
   1. Let *nameList* be [?][return-if-abrupt] [EnumerableOwnProperties][enumerable-own-properties](*obj*, **"key+value"**).
   1. Return [CreateArrayFromList][create-array-from-list](*nameList*).
-
-If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.
 
 ## EnumerableOwnProperties Abstract Operation
 
@@ -45,8 +39,6 @@ When the abstract operation EnumerableOwnProperties is called with Object *O* an
             1. Append *entry* to *properties*.
   1. Order the elements of *properties* so they are in the same relative order as would be produced by the Iterator that would be returned if the EnumerateObjectProperties internal method was invoked with *O*.
   1. Return *properties*.
-
-The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.
 
 Note: The "[EnumerableOwnNames][enumerable-own-names]" section is deleted. Any existing references to [EnumerableOwnNames][enumerable-own-names](*x*) should be changed to [EnumerableOwnProperties][enumerable-own-properties](*x*, **"key"**)
 

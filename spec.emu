@@ -16,7 +16,6 @@ contributors: Jordan Harband
 		1. Let _nameList_ be ? EnumerableOwnProperties(_obj_, *"key"*).
 		1. Return CreateArrayFromList(_nameList_).
 	</emu-alg>
-	<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
 </emu-clause>
 
 <emu-clause id="Object.values">
@@ -27,7 +26,6 @@ contributors: Jordan Harband
 		1. Let _valueList_ be ? EnumerableOwnProperties(_obj_, *"value"*).
 		1. Return CreateArrayFromList(_valueList_).
 	</emu-alg>
-	<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
 </emu-clause>
 
 <emu-clause id="Object.entries">
@@ -38,7 +36,6 @@ contributors: Jordan Harband
 		1. Let _entryList_ be ? EnumerableOwnProperties(_obj_, *"key+value"*).
 		1. Return CreateArrayFromList(_entryList_).
 	</emu-alg>
-	<p>If an implementation defines a specific order of enumeration for the for-in statement, the same order must be used for the elements of the array returned in step 5.</p>
 </emu-clause>
 
 <emu-clause id="EnumerableOwnProperties" aoid="EnumerableOwnProperties">
@@ -63,7 +60,6 @@ contributors: Jordan Harband
 		1. Order the elements of _properties_ so they are in the same relative order as would be produced by the Iterator that would be returned if the EnumerateObjectProperties internal method was invoked with _O_.
 		1. Return _properties_.
 	</emu-alg>
-	<emu-note>The order of elements in the returned list is the same as the enumeration order that is used by a for-in statement.</emu-note>
 
 	<p>Note: The "EnumerableOwnNames" section is deleted. Any existing references to EnumerableOwnNames(_x_) should be changed to EnumerableOwnProperties(_x_, *"key"*)</p>
 </emu-clause>
