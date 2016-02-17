@@ -6,14 +6,61 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 	<script src="./spec.js"></script>
 	<title>Object.values / Object.entries</title>
-	<script type="application/json" id="menu-search-biblio">{"clauses":{"Object.keys":{"location":"","id":"Object.keys","aoid":null,"title":"Object.keys( O )","number":"1"},"Object.values":{"location":"","id":"Object.values","aoid":null,"title":"Object.values( O )","number":"2"},"Object.entries":{"location":"","id":"Object.entries","aoid":null,"title":"Object.entries( O )","number":"3"},"EnumerableOwnProperties":{"location":"","id":"EnumerableOwnProperties","aoid":"EnumerableOwnProperties","title":"EnumerableOwnProperties","number":"4"},"sec-copyright-and-software-license":{"location":"","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","number":"A"}},"ops":{"EnumerableOwnProperties":{"aoid":"EnumerableOwnProperties","id":"EnumerableOwnProperties","location":""}},"productions":{},"terms":{},"examples":{},"notes":{},"tables":{},"figures":{}}</script>
+	<script type="application/json" id="menu-search-biblio">
+		[{
+			"type": "clause",
+			"id": "Object.keys",
+			"aoid": null,
+			"title": "Object.keys( O )",
+			"number": "1",
+			"location": "",
+			"key": "Object.keys( O )"
+		}, {
+			"type": "clause",
+			"id": "Object.values",
+			"aoid": null,
+			"title": "Object.values( O )",
+			"number": "2",
+			"location": "",
+			"key": "Object.values( O )"
+		}, {
+			"type": "clause",
+			"id": "Object.entries",
+			"aoid": null,
+			"title": "Object.entries( O )",
+			"number": "3",
+			"location": "",
+			"key": "Object.entries( O )"
+		}, {
+			"type": "clause",
+			"id": "EnumerableOwnProperties",
+			"aoid": "EnumerableOwnProperties",
+			"title": "EnumerableOwnProperties",
+			"number": "4",
+			"location": "",
+			"key": "EnumerableOwnProperties"
+		}, {
+			"type": "op",
+			"aoid": "EnumerableOwnProperties",
+			"refId": "EnumerableOwnProperties",
+			"location": "",
+			"key": "EnumerableOwnProperties"
+		}, {
+			"type": "clause",
+			"id": "sec-copyright-and-software-license",
+			"aoid": null,
+			"title": "Copyright & Software License",
+			"number": "A",
+			"location": "",
+			"key": "Copyright & Software License"
+		}]
+	</script>
 </head>
 
 <body>
 	<div id="menu-toggle">☰</div>
 	<div id="menu">
-		<div id="menu-search">
-			<input type="text" id="menu-search-box" placeholder="Search...">
+		<div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search...">
 			<div id="menu-search-results" class="inactive"></div>
 		</div>
 		<div id="menu-toc">
@@ -26,7 +73,7 @@
 			</ol>
 		</div>
 	</div>
-	<h1 class="version">Stage 3 Draft / February 10, 2016</h1>
+	<h1 class="version">Stage 3 Draft / February 17, 2016</h1>
 	<h1 class="title">Object.values / Object.entries</h1>
 	<emu-clause id="Object.keys">
 		<h1><span class="secnum">1</span>Object.keys( O )<span class="utils"><span class="anchor"><a href="#Object.keys">#</a></span></span></h1>
@@ -34,10 +81,13 @@
 			<emu-val>keys</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Let <var>obj</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
-				<li>Let <var>nameList</var> be ? <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>obj</var> be ?
+					<emu-xref aoid="ToObject"><a href="https://tc39.github.io/ecma262#sec-toobject">ToObject</a></emu-xref>(<var>O</var>).</li>
+				<li>Let <var>nameList</var> be ?
+					<emu-xref aoid="EnumerableOwnProperties"><a href="#EnumerableOwnProperties">EnumerableOwnProperties</a></emu-xref>(<var>obj</var>,
 					<emu-val>"key"</emu-val>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>nameList</var>).
+				<li>Return
+					<emu-xref aoid="CreateArrayFromList"><a href="https://tc39.github.io/ecma262#sec-createarrayfromlist">CreateArrayFromList</a></emu-xref>(<var>nameList</var>).
 				</li>
 			</ol>
 		</emu-alg>
@@ -49,10 +99,13 @@
 			<emu-val>values</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Let <var>obj</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
-				<li>Let <var>valueList</var> be ? <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>obj</var> be ?
+					<emu-xref aoid="ToObject"><a href="https://tc39.github.io/ecma262#sec-toobject">ToObject</a></emu-xref>(<var>O</var>).</li>
+				<li>Let <var>valueList</var> be ?
+					<emu-xref aoid="EnumerableOwnProperties"><a href="#EnumerableOwnProperties">EnumerableOwnProperties</a></emu-xref>(<var>obj</var>,
 					<emu-val>"value"</emu-val>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>valueList</var>).
+				<li>Return
+					<emu-xref aoid="CreateArrayFromList"><a href="https://tc39.github.io/ecma262#sec-createarrayfromlist">CreateArrayFromList</a></emu-xref>(<var>valueList</var>).
 				</li>
 			</ol>
 		</emu-alg>
@@ -64,10 +117,13 @@
 			<emu-val>entries</emu-val> function is called with argument <var>O</var>, the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Let <var>obj</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-toobject">ToObject</a>(<var>O</var>).</li>
-				<li>Let <var>entryList</var> be ? <a href="#EnumerableOwnProperties">EnumerableOwnProperties</a>(<var>obj</var>,
+				<li>Let <var>obj</var> be ?
+					<emu-xref aoid="ToObject"><a href="https://tc39.github.io/ecma262#sec-toobject">ToObject</a></emu-xref>(<var>O</var>).</li>
+				<li>Let <var>entryList</var> be ?
+					<emu-xref aoid="EnumerableOwnProperties"><a href="#EnumerableOwnProperties">EnumerableOwnProperties</a></emu-xref>(<var>obj</var>,
 					<emu-val>"key+value"</emu-val>).</li>
-				<li>Return <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(<var>entryList</var>).
+				<li>Return
+					<emu-xref aoid="CreateArrayFromList"><a href="https://tc39.github.io/ecma262#sec-createarrayfromlist">CreateArrayFromList</a></emu-xref>(<var>entryList</var>).
 				</li>
 			</ol>
 		</emu-alg>
@@ -78,14 +134,16 @@
 		<p>When the abstract operation EnumerableOwnProperties is called with Object <var>O</var> and String <var>kind</var> the following steps are taken:</p>
 		<emu-alg>
 			<ol>
-				<li>Assert: <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-data-types-and-values">Type</a>(<var>O</var>) is Object.</li>
+				<li>Assert:
+					<emu-xref aoid="Type"><a href="https://tc39.github.io/ecma262#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>O</var>) is Object.</li>
 				<li>Let <var>ownKeys</var> be ? O.[[OwnPropertyKeys]]().</li>
 				<li>Let <var>properties</var> be a new empty
-					<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref>.</li>
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262#sec-list-and-record-specification-type">List</a></emu-xref>.</li>
 				<li>Repeat, for each element <var>key</var> of <var>ownKeys</var> in
-					<emu-xref href="#sec-list-and-record-specification-type"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-list-and-record-specification-type">List</a></emu-xref> order
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262#sec-list-and-record-specification-type">List</a></emu-xref> order
 					<ol>
-						<li>If <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-data-types-and-values">Type</a>(<var>key</var>) is String, then
+						<li>If
+							<emu-xref aoid="Type"><a href="https://tc39.github.io/ecma262#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>key</var>) is String, then
 							<ol>
 								<li>Let <var>desc</var> be ? O.[[GetOwnProperty]](<var>key</var>).</li>
 								<li>If <var>desc</var> is not
@@ -96,14 +154,16 @@
 											<emu-val>"key"</emu-val>, append <var>key</var> to <var>properties</var>.</li>
 										<li>Else,
 											<ol>
-												<li>Let <var>value</var> be ? <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-get-o-p">Get</a>(<var>O</var>, <var>key</var>).</li>
+												<li>Let <var>value</var> be ?
+													<emu-xref aoid="Get"><a href="https://tc39.github.io/ecma262#sec-get-o-p">Get</a></emu-xref>(<var>O</var>, <var>key</var>).</li>
 												<li>If <var>kind</var> is
 													<emu-val>"value"</emu-val>, append <var>value</var> to <var>properties</var>.</li>
 												<li>Else,
 													<ol>
 														<li>Assert: <var>kind</var> is
 															<emu-val>"key+value"</emu-val>.</li>
-														<li>Let <var>entry</var> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-createarrayfromlist">CreateArrayFromList</a>(« <var>key</var>, <var>value</var> »).</li>
+														<li>Let <var>entry</var> be
+															<emu-xref aoid="CreateArrayFromList"><a href="https://tc39.github.io/ecma262#sec-createarrayfromlist">CreateArrayFromList</a></emu-xref>(« <var>key</var>, <var>value</var> »).</li>
 														<li>Append <var>entry</var> to <var>properties</var>.</li>
 													</ol>
 												</li>
@@ -122,8 +182,8 @@
 		</emu-alg>
 
 		<p>Note: The "
-			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
-			<emu-xref aoid="EnumerableOwnNames"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>(<var>x</var>) should be changed to EnumerableOwnProperties(<var>x</var>,
+			<emu-xref aoid="EnumerableOwnNames"><a href="https://tc39.github.io/ecma262#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>" section is deleted. Any existing references to
+			<emu-xref aoid="EnumerableOwnNames"><a href="https://tc39.github.io/ecma262#sec-enumerableownnames">EnumerableOwnNames</a></emu-xref>(<var>x</var>) should be changed to EnumerableOwnProperties(<var>x</var>,
 			<emu-val>"key"</emu-val>)</p>
 	</emu-clause>
 	<emu-annex id="sec-copyright-and-software-license">
