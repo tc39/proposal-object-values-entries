@@ -1,7 +1,7 @@
 {
 	"name": "ecma-proposal-object-values-entries",
 	"version": "0.0.0",
-	"description": "ES7 spec proposal for Object.{values,entries}",
+	"description": "ECMAScript spec proposal for Object.{values,entries}",
 	"scripts": {
 		"build": "ecmarkup spec.emu --js=spec.js --css=spec.css | js-beautify -f - --type=html -t > index.html",
 		"prepublish": "npm run build && echo >&2 'no publishing' && exit 255"
@@ -17,7 +17,8 @@
 		"entries",
 		"keys",
 		"Object.keys",
-		"ES7",
+		"ECMAScript",
+		"ESNext",
 		"spec"
 	],
 	"author": "Jordan Harband <ljharb@gmail.com>",

@@ -1,5 +1,5 @@
 # [Object.values](https://github.com/es-shims/Object.values) / [Object.entries](https://github.com/es-shims/Object.entries)
-ES7 Proposal, specs, and reference implementation for `Object.values`/`Object.entries`
+ECMAScript Proposal, specs, and reference implementation for `Object.values`/`Object.entries`
 
 Spec drafted by [@ljharb](https://github.com/ljharb).
 
