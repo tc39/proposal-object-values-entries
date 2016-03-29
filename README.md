@@ -7,7 +7,7 @@ This proposal is currently at [stage 4](https://github.com/tc39/ecma262) of the 
 
 Designated TC39 reviewers: @wycats @littledan @rwaldron
 
-i[Engine Implementations](https://github.com/tc39/proposal-object-values-entries/issues/10)
+[Engine Implementations](https://github.com/tc39/proposal-object-values-entries/issues/10)
 
 ## Previous discussions
  - [TC39 meeting notes](https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues)
