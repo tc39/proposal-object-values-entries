@@ -3,13 +3,11 @@ ECMAScript Proposal, specs, and reference implementation for `Object.values`/`Ob
 
 Spec drafted by [@ljharb](https://github.com/ljharb).
 
-This proposal is currently at [stage 3](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
+This proposal is currently at [stage 4](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/), and will be included in ES 2017.
 
 Designated TC39 reviewers: @wycats @littledan @rwaldron
 
-Engine Implementations:
- - [Firefox Nightly](https://bugzilla.mozilla.org/show_bug.cgi?id=1208464) (not yet landed, nightly only)
- - [WebKit Nightly](https://bugs.webkit.org/show_bug.cgi?id=150131) (not yet landed)
+i[Engine Implementations](https://github.com/tc39/proposal-object-values-entries/issues/10)
 
 ## Previous discussions
  - [TC39 meeting notes](https://github.com/rwaldron/tc39-notes/blob/c61f48cea5f2339a1ec65ca89827c8cff170779b/es6/2014-04/apr-9.md#51-objectentries-objectvalues)
